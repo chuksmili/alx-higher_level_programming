@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 
 /**
   * check_cycle - function that check if list is cyclical
@@ -6,7 +6,7 @@
   * Return: 1 if there is cycle and 0 if not
   */
 
-int check_cycle(listint_t *list);
+int check_cycle(listint_t *list)
 {
 	listint_t *fast, *slow;
 	if (!list || !list->next)
@@ -14,7 +14,7 @@ int check_cycle(listint_t *list);
 	fast = list;
 	slow = list;
 	
-	while (slow !- NULL && fast != NULL && fast->next != NULL)
+	while (slow != NULL && fast != NULL && fast->next != NULL)
 	{
 		slow = slow->next;
 		fast = fast->next->next;
